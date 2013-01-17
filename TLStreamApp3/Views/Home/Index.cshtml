@@ -1,0 +1,111 @@
+﻿@model IEnumerable<TLStreamApp3.Models.TLStream>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.owner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.featured)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.race)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.viewers)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.channelId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.channelType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.channelTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.channelLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.threadLink)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Self)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.owner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.featured)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.race)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.viewers)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rating)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.channelId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.channelType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.channelTitle)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.channelLink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.threadLink)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Self)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

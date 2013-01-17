@@ -1,0 +1,141 @@
+﻿@model TLStreamApp3.Models.TLStream
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>TLStream</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.name)
+            @Html.ValidationMessageFor(model => model.name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.type)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.type)
+            @Html.ValidationMessageFor(model => model.type)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.status)
+            @Html.ValidationMessageFor(model => model.status)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.owner)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.owner)
+            @Html.ValidationMessageFor(model => model.owner)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.featured)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.featured)
+            @Html.ValidationMessageFor(model => model.featured)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.race)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.race)
+            @Html.ValidationMessageFor(model => model.race)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.viewers)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.viewers)
+            @Html.ValidationMessageFor(model => model.viewers)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.rating)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.rating)
+            @Html.ValidationMessageFor(model => model.rating)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.channelId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.channelId)
+            @Html.ValidationMessageFor(model => model.channelId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.channelType)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.channelType)
+            @Html.ValidationMessageFor(model => model.channelType)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.channelTitle)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.channelTitle)
+            @Html.ValidationMessageFor(model => model.channelTitle)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.channelLink)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.channelLink)
+            @Html.ValidationMessageFor(model => model.channelLink)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.threadLink)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.threadLink)
+            @Html.ValidationMessageFor(model => model.threadLink)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Self)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Self)
+            @Html.ValidationMessageFor(model => model.Self)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
